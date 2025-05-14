@@ -29,13 +29,13 @@ const logger: winston.Logger = winston.createLogger({
       format: winston.format.combine(winston.format.colorize(), logFormat),
     }),
     new DailyRotateFile({
-      filename: 'logs/application-%DATE%.log',
+      filename: 'temp/application-%DATE%.log',
       datePattern: 'YYYY-MM-DD',
       level: 'info',
       maxFiles: '2d',
     }),
     new DailyRotateFile({
-      filename: 'logs/error-%DATE%.log',
+      filename: 'temp/error-%DATE%.log',
       datePattern: 'YYYY-MM-DD',
       level: 'error',
       maxFiles: '3d',
@@ -46,7 +46,7 @@ const logger: winston.Logger = winston.createLogger({
       format: winston.format.combine(winston.format.colorize(), logFormat),
     }),
     new winston.transports.File({
-      filename: 'logs/exceptions.log',
+      filename: 'temp/exceptions.log',
       maxFiles: 5,
     }),
   ],
@@ -55,7 +55,7 @@ const logger: winston.Logger = winston.createLogger({
       format: winston.format.combine(winston.format.colorize(), logFormat),
     }),
     new winston.transports.File({
-      filename: 'logs/rejections.log',
+      filename: 'temp/rejections.log',
       maxFiles: 5,
     }),
   ],

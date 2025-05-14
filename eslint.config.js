@@ -43,6 +43,6 @@ module.exports = defineConfig([
   },
   // Ignore patterns
   {
-    ignores: ['node_modules/', 'dist/', 'logs/', '*.log'],
+    ignores: ['node_modules/', 'dist/', 'temp/', '*.log'],
   },
 ]);
