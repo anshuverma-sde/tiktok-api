@@ -1,0 +1,18 @@
+node_modules
+logs
+.env*
+tmp/*
+dump*
+env.yaml
+.env
+yarn.lock
+.local_scripts
+.nyc_output/
+.DS_Store
+yarn-error.log
+package-lock.json
+# testing
+# testing
+/coverage/lcov-report/*
+/coverage/clover.xml
+/coverage/coverage-final.json
